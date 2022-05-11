@@ -2,9 +2,9 @@
   box-sizing: border-box;
 }
 body {
-  background: rgb(240, 240, 195);
+  background: rgb(36, 172, 177);
   text-align: center;
-  font-family: fantasy;
+  font-family: Arial;
   font-weight: bolder;
 }
 
@@ -12,6 +12,7 @@ img{
  width: 70%; 
  height: 40%;
  border-radius: 5px;
+ margin-top: 20px;
 }
 
 ul li {
@@ -24,20 +25,21 @@ text-align: left;
   display: flex;
   flex-wrap: wrap;
   border-radius: 5px;
-  width: 70%;
+  width: 75%;
   height: 40%;
   background-color: white;
   margin: 10px auto;
+  padding: 15px;
 }
 
 .tabs__menu {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-template-rows: 1fr;
   height: 30px;
   width: 100%;
   background: #cccccc;
   border-radius: 5px 0 0 5px;
+  display:grid;
+  grid-template-rows: 1fr;
+  grid-template-columns:1fr;
 }
 
 .tabs__button {
@@ -46,8 +48,8 @@ text-align: left;
   border: none;
   outline:none;
   cursor: pointer;
-  font-family: fantasy;
   font-weight: bolder;
+  font-size: 16px;
 }
 
 .tabs__button:active {
@@ -61,11 +63,16 @@ text-align: left;
 .tabs__button:hover {
   background: rgb(165, 233, 229);
   color: white;
+  text-shadow:
+  -1px -1px 0 #000,  
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .tabs__button--active {
   background-color: white;
-  color: lightseagreen;;
+  color: lightseagreen;
 }
 .tabs__content {
   padding: 15px;
