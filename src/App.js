@@ -11,8 +11,14 @@ class App extends Component{
     }
     console.log(data)
   }
+
+  handleSelect=(index)=>{
+    console.log(index)
+    this.setState({selectedTab: index})
+  }
   render() {
-    const {tabsInfo} = this.state;
+    const {tabsInfo,selectedTab} = this.state;
+    const types = ['A simple component','A stateful component','An application']
     return (
       <>
       <header>
@@ -26,17 +32,19 @@ class App extends Component{
       return (
         <>
         <div key={index} className="tabs__menu">
-            <button className="tabs__button tabs__button--active" data-for-tab="1">{tabInfo.title}</button>
+            <button onClick={()=>this.handleSelect(index)} className="tabs__button tabs__button--active" data-for-tab="1">{tabInfo.title}</button>
         </div> 
-        <div className="tabs__content" data-tab="1">
+        <div className={selectedTab!==index && "tabs__content"} data-tab="1">
             <h3>{tabInfo.title}</h3>
             <p>{tabInfo.text}</p>
-            <ul>
-                {/* <li>{tabInfo.components[index]}</li>
-                <li>{tabInfo.components[index]}</li>
-                <li>{tabInfo.components[index]}</li> */}
+            <ul className={selectedTab!==data.length-1 && 'tabs__content'}>
+              <li>{types[0]}</li>
+              <li>{types[1]}</li>
+              <li>{types[2]}</li>
             </ul>
+ 
         </div>
+        
     </>
       )
     })}
