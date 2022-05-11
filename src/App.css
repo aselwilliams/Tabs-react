@@ -1,38 +1,109 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+body {
+  background: rgb(240, 240, 195);
   text-align: center;
+  font-family: fantasy;
+  font-weight: bolder;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img{
+ width: 70%; 
+ height: 40%;
+ border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul li {
+list-style: none;
+text-align: left;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.tabs {
+  border: 1px solid #cccccc;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+  border-radius: 5px;
+  width: 70%;
+  height: 40%;
+  background-color: white;
+  margin: 10px auto;
+}
+
+.tabs__menu {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: 1fr;
+  height: 30px;
+  width: 100%;
+  background: #cccccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.tabs__button {
+  padding: 10px;
+  background: #eeeeee;
+  border: none;
+  outline:none;
+  cursor: pointer;
+  font-family: fantasy;
+  font-weight: bolder;
+}
+
+.tabs__button:active {
+  background: white;
+  color: lightseagreen;
+  border-bottom: rgb(165, 233, 229);
+  border-right: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+}
+
+.tabs__button:hover {
+  background: rgb(165, 233, 229);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.tabs__button--active {
+  background-color: white;
+  color: lightseagreen;;
+}
+.tabs__content {
+  padding: 15px;
+  font-size: 0.8rem;
+  display: none;
+}
+.tabs__content--active {
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (min-width: 768px) {
+  .tabs {
+      width: 45%;
+      height: 30%;
+      margin: auto 5%;
   }
-  to {
-    transform: rotate(360deg);
+  img {
+      width: 45%;
+      height: 30%;
+      margin-left: 5%;
+  }
+  main {
+      display: flex;
+      justify-content: center;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .tabs {
+      width: 35%;
+      height: 30%;
+  }
+  img {
+      width: 35%;
+      height: 30%;
+      margin-left: 15%;
+  }
+  main {
+      display: flex;
+      justify-content: center;
   }
 }
