@@ -10,11 +10,11 @@ const data = [
     {
         title: 'Goals',
         text:'Build encapsulated components that manage their own state, then compose them to make complex UIs.',
-        types:{
-           nameOne:'A simple component', 
-           nameTwo:'A stateful component', 
-           nameThree:'An application'
-    }
+        types:[
+           {name:'A simple component'}, 
+           {name:'A stateful component'}, 
+           {name:'An application'}
+]
           
     }
 ]
