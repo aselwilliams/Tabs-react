@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-function TabsInfo() {
+function TabsInfo({tabsInfo, selectedTab}) {
   return (
     <div>
     {tabsInfo.map((item, index) => (
@@ -14,10 +14,10 @@ function TabsInfo() {
         <h2>{item.title}</h2>
         <p>{item.text}</p>
         <ul
-          className={selectedTab !== data.length - 1 && "tabs__content"}
+          className={selectedTab !== tabsInfo.length - 1 && "tabs__content"}
         >
           {item.types &&
-            item.types.map((item, index) => <li>{item.name}</li>)}
+            item.types.map((item) => <li>{item.name}</li>)}
         </ul>
       </div>
     ))}
