@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import data from "./data";
+import Tabs from './components/Tabs'
+import TabsInfo from "./components/TabsInfo";
 
 function App() {
   const [tabsInfo, setTabsInfo] = useState(data);
@@ -24,44 +26,8 @@ function App() {
           alt="nature"
         />
         <section className="tabs">
-          <div className='tabs__menu'>
-            {tabsInfo.map((item, index) => (
-            
-              <div className="btn-container">
-                <button
-                  onClick={() => handleSelect(index)}
-                  className={selectedTab===index ? 'tabs__button tabs__button--active' : 'tabs__button'}
-                >
-                  {item.title}
-                </button>
-              </div>
-              
-            ))
-              }
-          </div>
-          <div >
-          {tabsInfo.map((item, index) => (
-           
-              
-              <div
-                className={
-                  selectedTab === index
-                    ? "tabs__content--active"
-                    : "tabs__content"
-                }
-              >
-                <h2>{item.title}</h2>
-                <p>{item.text}</p>
-                <ul
-                  className={selectedTab !== data.length - 1 && "tabs__content"}
-                >
-                  {item.types &&
-                    item.types.map((item, index) => <li>{item.name}</li>)}
-                </ul>
-              </div>
-           
-          ))}
-          </div>
+          <Tabs tabsInfo={tabsInfo} handleSelect={handleSelect} selectedTab={selectedTab} />
+          <TabsInfo />
         </section>
       </main>
     </>

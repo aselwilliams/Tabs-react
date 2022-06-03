@@ -8,33 +8,31 @@ body {
   font-weight: bolder;
 }
 
-img{
- width: 70%; 
- height: 40%;
- border-radius: 5px;
- margin-top: 20px;
+img {
+  width: 70%;
+  height: 40%;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 button {
-
   text-align: center;
   width: 100%;
   height: 100%;
   cursor: pointer;
   outline: none;
 }
-.btn-container{
-padding: 0px;;
- width:100%;
-
+.btn-container {
+  padding: 0px;
+  width: 100%;
 }
 ul li {
-list-style: none;
-text-align: left;
+  list-style: none;
+  text-align: left;
 }
 
 .tabs {
   border: 1px solid #cccccc;
- 
+
   border-radius: 5px;
   width: 100%;
   height: 100%;
@@ -45,16 +43,15 @@ text-align: left;
 .tabs__menu {
   height: 40px;
   width: 100%;
- display: flex;
- background: whitesmoke;
-
+  display: flex;
+  background: #eee;
 }
 
 .tabs__button {
   padding: 10px;
-  background:transparent;
+  background: transparent;
   border: none;
-  outline:none;
+  outline: none;
   cursor: pointer;
   font-weight: bolder;
   font-size: 16px;
@@ -71,17 +68,14 @@ text-align: left;
 .tabs__button:hover {
   background: rgb(165, 233, 229);
   color: white;
-  text-shadow:
-  -1px -1px 0 #000,  
-   1px -1px 0 #000,
-   -1px 1px 0 #000,
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
 }
 
 .tabs__button--active {
   background-color: white;
   color: lightseagreen;
-} 
+}
 .tabs__content {
   padding: 15px;
   font-size: 0.8rem;
@@ -89,38 +83,38 @@ text-align: left;
 }
 .tabs__content--active {
   display: block;
-  width:100%;
+  width: 100%;
   padding: 20px;
 }
 
 @media only screen and (min-width: 768px) {
   .tabs {
-      width: 45%;
-      height: 30%;
-      margin: auto 5%;
+    width: 45%;
+    height: 30%;
+    margin: auto 5%;
   }
   img {
-      width: 45%;
-      height: 30%;
-      margin-left: 5%;
+    width: 45%;
+    height: 30%;
+    margin-left: 5%;
   }
   main {
-      display: flex;
-      justify-content: center;
+    display: flex;
+    justify-content: center;
   }
 }
 @media only screen and (min-width: 992px) {
   .tabs {
-      width: 35%;
-      height: 30%;
+    width: 35%;
+    height: 30%;
   }
   img {
-      width: 35%;
-      height: 30%;
-      margin-left: 15%;
+    width: 35%;
+    height: 30%;
+    margin-left: 15%;
   }
   main {
-      display: flex;
-      justify-content: center;
+    display: flex;
+    justify-content: center;
   }
 }
